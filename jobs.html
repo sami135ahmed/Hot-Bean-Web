@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jobs | Hot Beans Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #111;
+      padding: 30px 20px 10px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+    }
+    .logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 20px 0;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+      background-color: #111;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #bb86fc;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #e0aaff;
+    }
+    main {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    main h2 {
+      font-size: 2rem;
+      color: #bb86fc;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .jobs-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .job-card {
+      background-color: #111;
+      border: 1px solid #222;
+      border-radius: 12px;
+      padding: 25px 20px;
+      box-shadow: 0 2px 12px rgba(187, 134, 252, 0.05);
+      transition: transform 0.2s;
+    }
+    .job-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 4px 24px rgba(187, 134, 252, 0.10);
+    }
+    .job-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #e0aaff;
+      margin-bottom: 8px;
+    }
+    .job-desc {
+      font-size: 1.05rem;
+      color: #ddd;
+      margin-bottom: 10px;
+    }
+    .job-req {
+      font-size: 0.98rem;
+      color: #bb86fc;
+      margin-bottom: 10px;
+    }
+    .apply-btn {
+      display: inline-block;
+      padding: 8px 22px;
+      background: linear-gradient(90deg, #bb86fc 60%, #e0aaff 100%);
+      color: #111;
+      font-weight: 700;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+      margin-top: 5px;
+    }
+    .apply-btn:hover {
+      background: linear-gradient(90deg, #e0aaff 60%, #bb86fc 100%);
+      color: #000;
+    }
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #222;
+      margin-top: 40px;
+    }
+    @media (max-width: 700px) {
+      main { padding: 20px 5px; }
+      .job-card { padding: 18px 8px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="hot-beans.jpg" alt="Hot Beans Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="index.html">Profile</a></li>
+        <li><a href="developers.html">Developers</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="onlineapplications.html">Online Application Form</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Join Our Team</h2>
+    <p style="text-align:center; color:#ddd;">Explore exciting career opportunities at Hot Beans Web!</p>
+    <div class="jobs-container">
+      <!-- Job 1 -->
+      <div class="job-card">
+        <div class="job-title">Junior Web Developer</div>
+        <div class="job-desc">
+          Work with our team to build and maintain modern, responsive websites for a variety of clients.
+        </div>
+        <div class="job-req">
+          <strong>Requirements:</strong> Basic HTML, CSS, JavaScript knowledge; eagerness to learn; good teamwork skills.
+        </div>
+        <a href="links.html" class="apply-btn">Apply Now</a>
+      </div>
+      <!-- Job 2 -->
+      <div class="job-card">
+        <div class="job-title">Front-End Developer</div>
+        <div class="job-desc">
+          Create beautiful user interfaces using the latest front-end frameworks and tools.
+        </div>
+        <div class="job-req">
+          <strong>Requirements:</strong> Experience with HTML, CSS, JavaScript, and React or Vue; eye for design.
+        </div>
+        <a href="links.html" class="apply-btn">Apply Now</a>
+      </div>
+      <!-- Job 3 -->
+      <div class="job-card">
+        <div class="job-title">Back-End Developer</div>
+        <div class="job-desc">
+          Build robust server-side logic and APIs to power our web applications.
+        </div>
+        <div class="job-req">
+          <strong>Requirements:</strong> Knowledge of Node.js or Python; understanding of databases; problem-solving skills.
+        </div>
+        <a href="links.html" class="apply-btn">Apply Now</a>
+      </div>
+      <!-- Add more job cards as needed -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Hot Beans Web. All rights reserved.</p>
+  </footer>
+</body>
+</html>
