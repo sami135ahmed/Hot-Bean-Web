@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Online Application Form | Hot Beans Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #111;
+      padding: 30px 20px 10px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+    }
+    .logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 20px 0;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+      background-color: #111;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #bb86fc;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #e0aaff;
+    }
+    main {
+      padding: 40px 20px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    main h2 {
+      font-size: 2rem;
+      color: #bb86fc;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    form {
+      background-color: #111;
+      border: 1px solid #222;
+      border-radius: 12px;
+      padding: 30px 20px 20px;
+      box-shadow: 0 2px 12px rgba(187, 134, 252, 0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    label {
+      font-weight: 600;
+      color: #e0aaff;
+      margin-bottom: 4px;
+      display: block;
+      text-align: left;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #333;
+      border-radius: 6px;
+      background: #222;
+      color: #fff;
+      font-size: 1rem;
+      margin-bottom: 6px;
+      transition: border 0.2s;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    select:focus,
+    textarea:focus {
+      border: 1.5px solid #bb86fc;
+      outline: none;
+    }
+    input[type="file"] {
+      background: #222;
+      color: #fff;
+      border-radius: 6px;
+      padding: 8px 0;
+      margin-bottom: 6px;
+      border: none;
+    }
+    textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+    .submit-btn {
+      display: inline-block;
+      padding: 10px 0;
+      background: linear-gradient(90deg, #bb86fc 60%, #e0aaff 100%);
+      color: #111;
+      font-weight: 700;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.05rem;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+      margin-top: 10px;
+    }
+    .submit-btn:hover {
+      background: linear-gradient(90deg, #e0aaff 60%, #bb86fc 100%);
+      color: #000;
+    }
+    .required {
+      color: #ff6b6b;
+      margin-left: 2px;
+    }
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #222;
+      margin-top: 40px;
+    }
+    @media (max-width: 600px) {
+      main { padding: 20px 5px; }
+      form { padding: 18px 6px 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="hot-beans.jpg" alt="Hot Beans Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="index.html">Profile</a></li>
+        <li><a href="developers.html">Developers</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="onlineapplications.html">Online Application Form</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Online Application Form</h2>
+    <form action="#" method="post" enctype="multipart/form-data" autocomplete="on" id="applicationForm">
+      <div>
+        <label for="fullname">Full Name <span class="required">*</span></label>
+        <input type="text" id="fullname" name="fullname" required />
+      </div>
+      <div>
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div>
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9+\s\-()]{7,}" placeholder="e.g. 07123 456789" />
+      </div>
+      <div>
+        <label for="position">Position Applied For <span class="required">*</span></label>
+        <select id="position" name="position" required>
+          <option value="">-- Please select --</option>
+          <option value="Junior Web Developer">Junior Web Developer</option>
+          <option value="Front-End Developer">Front-End Developer</option>
+          <option value="Back-End Developer">Back-End Developer</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="coverletter">Cover Letter <span class="required">*</span></label>
+        <textarea id="coverletter" name="coverletter" required placeholder="Tell us why you're a great fit!"></textarea>
+      </div>
+      <div>
+        <label for="cv">Upload Your CV (PDF or DOCX) <span class="required">*</span></label>
+        <!-- CV upload is now required -->
+        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required />
+      </div>
+      <button type="submit" class="submit-btn">Submit Application</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Hot Beans Web. All rights reserved.</p>
+  </footer>
+
+  <!-- Enhanced CV validation script -->
+  <script>
+    document.getElementById('applicationForm').addEventListener('submit', function(event) {
+      const cvInput = document.getElementById('cv');
+      const file = cvInput.files[0];
+      if (!file) {
+        alert('Please upload your CV.');
+        cvInput.focus();
+        event.preventDefault();
+        return;
+      }
+      // Allowed file types
+      const allowedTypes = [
+        'application/pdf',
+        'application/msword',
+        'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+      ];
+      // Check file type
+      if (!allowedTypes.includes(file.type)) {
+        alert('CV must be a PDF or DOC/DOCX file.');
+        cvInput.value = '';
+        cvInput.focus();
+        event.preventDefault();
+        return;
+      }
+      // Check file size (2MB max)
+      if (file.size > 2 * 1024 * 1024) {
+        alert('CV must be less than 2MB.');
+        cvInput.value = '';
+        cvInput.focus();
+        event.preventDefault();
+        return;
+      }
+    });
+  </script>
+</body>
+</html>

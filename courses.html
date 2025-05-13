@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Courses | Hot Beans Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #111;
+      padding: 30px 20px 10px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+    }
+    .logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 20px 0;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+      background-color: #111;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #bb86fc;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #e0aaff;
+    }
+    main {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    main h2 {
+      font-size: 2rem;
+      color: #bb86fc;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .courses-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .course-card {
+      background-color: #111;
+      border: 1px solid #222;
+      border-radius: 12px;
+      padding: 25px 20px;
+      box-shadow: 0 2px 12px rgba(187, 134, 252, 0.05);
+      transition: transform 0.2s;
+    }
+    .course-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 4px 24px rgba(187, 134, 252, 0.10);
+    }
+    .course-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #e0aaff;
+      margin-bottom: 8px;
+    }
+    .course-level {
+      font-size: 1rem;
+      color: #bb86fc;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    .course-desc {
+      font-size: 1.05rem;
+      color: #ddd;
+      margin-bottom: 10px;
+    }
+    .learn-btn {
+      display: inline-block;
+      padding: 8px 22px;
+      background: linear-gradient(90deg, #bb86fc 60%, #e0aaff 100%);
+      color: #111;
+      font-weight: 700;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+      margin-top: 5px;
+    }
+    .learn-btn:hover {
+      background: linear-gradient(90deg, #e0aaff 60%, #bb86fc 100%);
+      color: #000;
+    }
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #222;
+      margin-top: 40px;
+    }
+    @media (max-width: 700px) {
+      main { padding: 20px 5px; }
+      .course-card { padding: 18px 8px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="hot-beans.jpg" alt="Hot Beans Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="index.html">Profile</a></li>
+        <li><a href="developers.html">Developers</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="onlineapplications.html">Online Application Form</Form></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Web Development Courses</h2>
+    <p style="text-align:center; color:#ddd;">Boost your skills with our curated selection of web development courses!</p>
+    <div class="courses-container">
+      <!-- Course 1 -->
+      <div class="course-card">
+        <div class="course-title">HTML & CSS Fundamentals</div>
+        <div class="course-level">Beginner</div>
+        <div class="course-desc">
+          Learn the building blocks of the web. This course covers HTML structure, semantic tags, and styling with CSS.
+        </div>
+        <a href="https://www.freecodecamp.org/learn/responsive-web-design/" class="learn-btn" target="_blank">Learn More</a>
+      </div>
+      <!-- Course 2 -->
+      <div class="course-card">
+        <div class="course-title">JavaScript Essentials</div>
+        <div class="course-level">Beginner to Intermediate</div>
+        <div class="course-desc">
+          Master the basics of JavaScript, including variables, functions, events, and manipulating the DOM.
+        </div>
+        <a href="https://www.codecademy.com/learn/introduction-to-javascript" class="learn-btn" target="_blank">Learn More</a>
+      </div>
+      <!-- Course 3 -->
+      <div class="course-card">
+        <div class="course-title">Responsive Web Design</div>
+        <div class="course-level">Intermediate</div>
+        <div class="course-desc">
+          Create websites that look great on any device. Learn about media queries, flexible layouts, and mobile-first design.
+        </div>
+        <a href="https://www.coursera.org/learn/responsive-web-design" class="learn-btn" target="_blank">Learn More</a>
+      </div>
+      <!-- Course 4 -->
+      <div class="course-card">
+        <div class="course-title">Front-End Frameworks: React Basics</div>
+        <div class="course-level">Intermediate to Advanced</div>
+        <div class="course-desc">
+          Dive into modern web development with React. Build dynamic, component-based user interfaces.
+        </div>
+        <a href="https://react.dev/learn" class="learn-btn" target="_blank">Learn More</a>
+      </div>
+      <!-- Add more course cards as needed -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Hot Beans Web. All rights reserved.</p>
+  </footer>
+</body>
+</html>

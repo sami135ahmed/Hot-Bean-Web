@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developers | Hot Beans Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #111;
+      padding: 30px 20px 10px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+    }
+    .logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 20px 0;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+      background-color: #111;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #bb86fc;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #e0aaff;
+    }
+    main {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    main h2 {
+      font-size: 2rem;
+      color: #bb86fc;
+      margin-bottom: 10px;
+    }
+    .developers-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .developer-card {
+      background-color: #111;
+      border: 1px solid #222;
+      border-radius: 12px;
+      width: 300px;
+      padding: 25px 20px;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(187, 134, 252, 0.05);
+      transition: transform 0.2s;
+    }
+    .developer-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 4px 24px rgba(187, 134, 252, 0.10);
+    }
+    .developer-photo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #bb86fc;
+      margin-bottom: 12px;
+    }
+    .developer-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #e0aaff;
+      margin-bottom: 4px;
+    }
+    .developer-role {
+      font-size: 1rem;
+      color: #bb86fc;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    .developer-bio {
+      font-size: 0.98rem;
+      color: #ddd;
+    }
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #222;
+      margin-top: 40px;
+    }
+    @media (max-width: 900px) {
+      .developers-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="hot-beans.jpg" alt="Hot Beans Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Profile</a></li>
+        <li><a href="developers.html">Developers</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="onlineapplications.html">Online Application Form</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Meet Our Developers</h2>
+    <p>Get to know the talented team behind Hot Beans Web!</p>
+    <div class="developers-container">
+      <!-- Developer 1 -->
+      <div class="developer-card">
+        <img src="dev1.jpg" alt="Photo of James Parker" class="developer-photo">
+        <div class="developer-name">James Parker</div>
+        <div class="developer-role">Lead Front-End Developer</div>
+        <div class="developer-bio">
+          James specializes in crafting beautiful, user-friendly interfaces with React and Vue. He loves turning ideas into interactive web apps.
+        </div>
+      </div>
+      <!-- Developer 2 -->
+      <div class="developer-card">
+        <img src="dev2.jpg" alt="Photo of Lily Anderson" class="developer-photo">
+        <div class="developer-name">Lily Anderson</div>
+        <div class="developer-role">Back-End Developer</div>
+        <div class="developer-bio">
+          Lily is passionate about building robust server-side systems with Node.js and Python. She ensures your data is secure and your site runs smoothly.
+        </div>
+      </div>
+      <!-- Developer 3 -->
+      <div class="developer-card">
+        <img src="dev3.jpg" alt="Photo of Mason White" class="developer-photo">
+        <div class="developer-name">Mason White</div>
+        <div class="developer-role">Full Stack Developer</div>
+        <div class="developer-bio">
+          Mason bridges the gap between front-end and back-end. He loves solving complex problems and optimizing performance.
+        </div>
+      </div>
+      <!-- Add more developer cards as needed -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Hot Beans Web. All rights reserved.</p>
+  </footer>
+</body>
+</html>
